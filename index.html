@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Salón de Fiestas [Nombre] - Eventos y Celebraciones</title>
+    <meta name="description" content="Salón de fiestas para todo tipo de eventos: cumpleaños, bautismos, comuniones y reuniones. Amplias instalaciones y servicios personalizados. Reserva por WhatsApp.">
+    <meta name="keywords" content="salón de fiestas, eventos infantiles, cumpleaños, alquiler de salón, celebraciones, fiestas privadas">
+    <meta name="author" content="[Nombre del Salón]">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Salón de Fiestas [Nombre]">
+    <meta property="og:description" content="Organiza tu evento en nuestras instalaciones. Reserva por WhatsApp.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://www.salondelnombre.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%233498db'/><text x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='Arial'>🎉</text></svg>">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== VARIABLES DE COLOR (personalizables) ===== */
+        :root {
+            --primary-color: #3498db;       /* Color principal (botones, acentos) */
+            --secondary-color: #2ecc71;      /* Color secundario (íconos, detalles) */
+            --accent-color: #e74c3c;          /* Color de llamada a la acción */
+            --whatsapp-color: #25D366;        /* Color oficial de WhatsApp */
+            --whatsapp-hover: #128C7E;        /* WhatsApp hover más oscuro */
+            --maps-color: #4285F4;            /* Color de Google Maps */
+            --maps-hover: #3367D6;             /* Maps hover */
+            --dark-color: #2c3e50;            /* Color para textos y fondos oscuros */
+            --light-color: #ecf0f1;            /* Color de fondo claro */
+            --gray-bg: #f9f9f9;                /* Fondo gris para secciones alternadas */
+            --text-color: #333;                 /* Color de texto principal */
+            --text-light: #555;                  /* Color de texto secundario */
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset y estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        section {
+            padding: 5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header y navegación */
+        header {
+            background-color: white;
+            color: var(--dark-color);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero section con logo y redes sociales */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 1.5rem;
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+        }
+
+        .hero-logo img {
+            max-width: 150px;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        .hero-logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(255,255,255,0.2);
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 3rem;
+            color: white;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        .cta-button.whatsapp {
+            background-color: var(--whatsapp-color);
+            color: white;
+        }
+
+        .cta-button.whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button.maps {
+            background-color: var(--maps-color);
+            color: white;
+        }
+
+        .cta-button.maps:hover {
+            background-color: var(--maps-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button i {
+            margin-right: 10px;
+        }
+
+        .hero-social {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .hero-social a {
+            color: white;
+            font-size: 1.8rem;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+
+        .hero-social a:hover {
+            transform: translateY(-5px);
+            opacity: 1;
+        }
+
+        /* Secciones alternadas */
+        .service-section {
+            background-color: white;
+        }
+
+        .service-section:nth-child(even) {
+            background-color: var(--gray-bg);
+        }
+
+        .service-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .service-container.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            min-height: 350px;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .service-features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Galería */
+        .gallery {
+            background-color: var(--gray-bg);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 220px;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Sección de ubicación y contacto */
+        .location-contact {
+            background-color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 100%;
+            min-height: 350px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 30px;
+            text-align: center;
+        }
+
+        .contact-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            color: var(--dark-color);
+        }
+
+        .contact-item p {
+            margin-bottom: 0;
+        }
+
+        .schedule-list {
+            list-style: none;
+        }
+
+        .schedule-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .schedule-list li:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-list span {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .maps-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--maps-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: var(--transition);
+            width: fit-content;
+        }
+
+        .maps-button:hover {
+            background-color: var(--maps-hover);
+            transform: translateY(-3px);
+        }
+
+        .maps-button i {
+            margin-right: 10px;
+        }
+
+        /* CTA final */
+        .final-cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .final-cta h2 {
+            color: white;
+        }
+
+        .final-cta h2:after {
+            background-color: white;
+        }
+
+        .final-cta p {
+            color: white;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 1.5rem;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-hover);
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .service-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .service-container.reverse {
+                flex-direction: column;
+            }
+            
+            .service-image {
+                width: 100%;
+                min-height: 300px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 1.5rem;
+                box-shadow: var(--shadow);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 5rem 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3.5rem 1.5rem;
+            }
+
+            .hero-logo img {
+                max-width: 100px;
+            }
+
+            .hero-social {
+                gap: 1rem;
+            }
+            
+            .hero-social a {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-placeholder">LOGO</div>
+                <div class="logo-text">Nombre del Salón</div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#instalaciones">Instalaciones</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección Hero con logo, botón WhatsApp y redes sociales -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-logo">
+                <!-- Opción 1: Imagen real -->
+                <!-- <img src="ruta-del-logo.png" alt="Logo del Salón"> -->
+                
+                <!-- Opción 2: Placeholder -->
+                <div class="hero-logo-placeholder">
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+            </div>
+            <h1>Organiza tu evento en nuestro salón de fiestas</h1>
+            <p>Celebra tus momentos especiales en un espacio diseñado para crear recuerdos inolvidables. Ofrecemos instalaciones modernas y servicios personalizados para todo tipo de eventos.</p>
+            <a href="https://wa.me/5491112345678?text=Hola,%20me%20interesa%20reservar%20un%20turno%20para%20un%20evento" class="cta-button whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+            </a>
+            <!-- Redes sociales debajo del botón -->
+            <div class="hero-social">
+                <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios 1 -->
+    <section class="service-section" id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="service-container">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Servicio 1 - Descripción del primer servicio" loading="lazy">
+                </div>
+                <div class="service-content">
+                    <h3>Servicio 1</h3>
+                    <p>Descripción del servicio 1. Aquí puedes describir uno de los principales servicios que ofrece tu salón de fiestas. Explica qué incluye, qué ventajas ofrece y por qué los clientes deberían elegirlo.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 1</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 2</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 3</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios 2 (alternada) -->
+    <section class="service-section">
+        <div class="container">
+            <div class="service-container reverse">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1530968830369-b0491f02c5ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Servicio 2 - Descripción del segundo servicio" loading="lazy">
+                </div>
+                <div class="service-content">
+                    <h3>Servicio 2</h3>
+                    <p>Descripción del servicio 2. Aquí puedes describir otro servicio importante que ofrece tu salón. Explica sus particularidades, quién puede beneficiarse de él y qué lo hace especial.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 1</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 2</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 3</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios 3 (alternada) -->
+    <section class="service-section">
+        <div class="container">
+            <div class="service-container">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1567593810070-7a5c0925344e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Servicio 3 - Descripción del tercer servicio" loading="lazy">
+                </div>
+                <div class="service-content">
+                    <h3>Servicio 3</h3>
+                    <p>Descripción del servicio 3. Aquí puedes describir un tercer servicio o un valor agregado que ofreces. Menciona qué incluye, cómo se diferencia de otros y por qué es una buena opción para los clientes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 1</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 2</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 3</li>
+                        <li><i class="fas fa-check-circle"></i> Característica destacada 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de instalaciones -->
+    <section class="gallery" id="instalaciones">
+        <div class="container">
+            <h2>Nuestras Instalaciones</h2>
+            <p class="text-center">Conoce nuestros espacios diseñados para todo tipo de eventos y celebraciones</p>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1577223625818-75bc1f2ac0e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 1 - Salón principal" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 2 - Área infantil" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 3 - Zona de juegos" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 4 - Buffet" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación y Contacto -->
+    <section class="location-contact" id="ubicacion">
+        <div class="container">
+            <h2>Ubicación y Contacto</h2>
+            <div class="contact-grid">
+                <div class="map-container">
+                    <!-- Mapa de Google Maps (placeholder) -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016887889517!2d-58.38375908477038!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación del salón"></iframe>
+                </div>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Calle 123, Ciudad, Provincia - Código Postal</p>
+                            <p><small>(Referencia: cerca de la plaza principal)</small></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Teléfonos</h4>
+                            <p>Fijo: (011) 1234-5678</p>
+                            <p>Móvil: +54 9 11 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@salondefiestas.com</p>
+                            <p>reservas@salondefiestas.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horarios de atención</h4>
+                            <ul class="schedule-list">
+                                <li><span>Lunes a Viernes:</span> 9:00 - 18:00</li>
+                                <li><span>Sábados:</span> 10:00 - 14:00</li>
+                                <li><span>Domingos:</span> Solo eventos</li>
+                                <li><span>Feriados:</span> Consultar disponibilidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=Obelisco+Buenos+Aires" class="maps-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marked-alt"></i> Cómo llegar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="final-cta" id="reservas">
+        <div class="container">
+            <h2>Reserva tu Evento</h2>
+            <p>Contamos con disponibilidad para eventos los fines de semana y días de semana. Te recomendamos reservar con anticipación para asegurar la fecha que deseas.</p>
+            <p>¡Solicita información ahora mismo por WhatsApp y recibe todas las opciones disponibles para tu celebración!</p>
+            <a href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20disponibilidad%20y%20precios%20para%20un%20evento" class="cta-button whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Consultar disponibilidad
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Nombre del Salón</h3>
+                    <p>Descripción breve del salón de fiestas. Puedes incluir información sobre tu experiencia, filosofía o lo que hace especial a tu negocio.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Calle 123, Ciudad, Provincia</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>(011) 1234-5678</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@salondefiestas.com</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+54 9 11 1234-5678</span>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Horarios de Atención</h3>
+                    <ul class="footer-links">
+                        <li>Lunes a Viernes: 9:00 - 18:00</li>
+                        <li>Sábados: 10:00 - 14:00</li>
+                        <li>Domingos: Solo eventos</li>
+                        <li>Feriados: Consultar disponibilidad</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Nombre del Salón - Salón de Fiestas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20sobre%20los%20servicios%20del%20salón%20de%20fiestas" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Menú móvil
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Efecto scroll suave para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Actualizar año actual en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Animación de scroll para las secciones (opcional)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.service-container, .gallery-item, .contact-grid').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- JSON-LD para SEO local (datos estructurados) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Nombre del Salón",
+        "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle 123",
+            "addressLocality": "Ciudad",
+            "addressRegion": "Provincia",
+            "postalCode": "1234",
+            "addressCountry": "AR"
+        },
+        "telephone": "+5491112345678",
+        "email": "info@salondefiestas.com",
+        "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-14:00",
+        "priceRange": "$$",
+        "description": "Salón de fiestas para eventos infantiles y adultos. Amplias instalaciones y servicios personalizados.",
+        "url": "https://www.salondelnombre.com",
+        "sameAs": [
+            "https://www.facebook.com/tusalon",
+            "https://www.instagram.com/tusalon"
+        ]
+    }
+    </script>
+</body>
+</html>
