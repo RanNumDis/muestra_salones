@@ -14,7 +14,7 @@
     <!-- Open Graph / Redes Sociales -->
     <meta property="og:title" content="Salón de Fiestas [Nombre]">
     <meta property="og:description" content="Organiza tu evento en nuestras instalaciones. Reserva por WhatsApp.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image" content="instalacion1.png"> <!-- Imagen para compartir en redes -->
     <meta property="og:url" content="https://www.salondelnombre.com">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -45,6 +45,7 @@
             --text-light: #555;                  /* Color de texto secundario */
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
+            --hero-bg-image: url('hero.png'); /* Imagen de fondo del hero y reservas */
         }
 
         /* Reset y estilos base */
@@ -188,7 +189,7 @@
 
         /* Hero section con logo y redes sociales */
         .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.8)), var(--hero-bg-image);
             background-size: cover;
             background-position: center;
             color: white;
@@ -234,46 +235,6 @@
             color: white;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            border: none;
-            cursor: pointer;
-            margin: 0.5rem;
-        }
-
-        .cta-button.whatsapp {
-            background-color: var(--whatsapp-color);
-            color: white;
-        }
-
-        .cta-button.whatsapp:hover {
-            background-color: var(--whatsapp-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .cta-button.maps {
-            background-color: var(--maps-color);
-            color: white;
-        }
-
-        .cta-button.maps:hover {
-            background-color: var(--maps-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .cta-button i {
-            margin-right: 10px;
-        }
-
         .hero-social {
             margin-top: 2rem;
             display: flex;
@@ -293,63 +254,98 @@
             opacity: 1;
         }
 
-        /* Secciones alternadas */
-        .service-section {
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-color);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-maps {
+            background-color: var(--maps-color);
+            color: white;
+            align-self: center; /* Centra el botón horizontalmente */
+        }
+
+        .btn-maps:hover {
+            background-color: var(--maps-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn i {
+            margin-right: 10px;
+        }
+
+        /* Sección de servicios */
+        .services {
             background-color: white;
         }
 
-        .service-section:nth-child(even) {
-            background-color: var(--gray-bg);
-        }
-
-        .service-container {
+        .service-list {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 3rem;
         }
 
-        .service-container.reverse {
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: var(--gray-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .service-item:nth-child(even) {
             flex-direction: row-reverse;
         }
 
         .service-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            min-height: 350px;
+            flex: 1 1 40%;
+            min-height: 280px;
         }
 
         .service-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
         }
 
-        .service-image img:hover {
-            transform: scale(1.03);
+        .service-text {
+            flex: 1 1 60%;
+            padding: 2rem;
         }
 
-        .service-content {
-            flex: 1;
+        .service-text h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
-        .service-features {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .service-features li {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .service-features i {
-            color: var(--secondary-color);
-            margin-right: 10px;
-            font-size: 1.2rem;
+        .service-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
         }
 
         /* Galería */
@@ -413,6 +409,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            align-items: flex-start; /* Evita que los hijos se estiren */
         }
 
         .contact-item {
@@ -458,34 +455,12 @@
             color: var(--dark-color);
         }
 
-        .maps-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--maps-color);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: var(--transition);
-            width: fit-content;
-        }
-
-        .maps-button:hover {
-            background-color: var(--maps-hover);
-            transform: translateY(-3px);
-        }
-
-        .maps-button i {
-            margin-right: 10px;
-        }
-
-        /* CTA final */
+        /* CTA final (con misma imagen de fondo que hero) */
         .final-cta {
             text-align: center;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.8)), var(--hero-bg-image);
+            background-size: cover;
+            background-position: center;
             color: white;
         }
 
@@ -526,6 +501,10 @@
         .footer-column h3 {
             color: white;
             margin-bottom: 1.5rem;
+        }
+
+        .footer-column p {
+            color: white; /* Descripción en blanco */
         }
 
         .footer-links {
@@ -621,18 +600,21 @@
 
         /* Responsive */
         @media (max-width: 992px) {
-            .service-container {
-                flex-direction: column;
-                gap: 2rem;
+            .service-item {
+                flex-direction: column !important;
             }
-            
-            .service-container.reverse {
-                flex-direction: column;
-            }
-            
+
             .service-image {
                 width: 100%;
-                min-height: 300px;
+                min-height: 220px;
+            }
+
+            .service-text {
+                padding: 1.5rem;
+            }
+
+            .service-text h3 {
+                font-size: 1.6rem;
             }
             
             h1 {
@@ -692,6 +674,14 @@
             .hero-social a {
                 font-size: 1.5rem;
             }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 2rem;
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
 </head>
@@ -700,7 +690,10 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <div class="logo-placeholder">LOGO</div>
+                <!-- Logo: puede ser imagen o texto. Por defecto usamos placeholder -->               
+                <i class="fas fa-birthday-cake"></i>                
+                <!-- <img src="logo.png" alt="Logo del Salón" style="height:50px;"> -->
+                <!--<div class="logo-placeholder">LOGO</div> -->
                 <div class="logo-text">Nombre del Salón</div>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -720,17 +713,15 @@
     <section class="hero" id="inicio">
         <div class="container">
             <div class="hero-logo">
-                <!-- Opción 1: Imagen real -->
-                <!-- <img src="ruta-del-logo.png" alt="Logo del Salón"> -->
-                
-                <!-- Opción 2: Placeholder -->
+                <!-- Logo en el hero: puede ser imagen o placeholder -->
+                <!-- <img src="logo.png" alt="Logo del Salón"> -->
                 <div class="hero-logo-placeholder">
                     <i class="fas fa-birthday-cake"></i>
                 </div>
             </div>
             <h1>Organiza tu evento en nuestro salón de fiestas</h1>
             <p>Celebra tus momentos especiales en un espacio diseñado para crear recuerdos inolvidables. Ofrecemos instalaciones modernas y servicios personalizados para todo tipo de eventos.</p>
-            <a href="https://wa.me/5491112345678?text=Hola,%20me%20interesa%20reservar%20un%20turno%20para%20un%20evento" class="cta-button whatsapp" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5491112345678?text=Hola,%20me%20interesa%20reservar%20un%20turno%20para%20un%20evento" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
             </a>
             <!-- Redes sociales debajo del botón -->
@@ -743,65 +734,50 @@
         </div>
     </section>
 
-    <!-- Sección de Servicios 1 -->
-    <section class="service-section" id="servicios">
+    <!-- Sección de Servicios -->
+    <section class="services" id="servicios">
         <div class="container">
             <h2>Nuestros Servicios</h2>
-            <div class="service-container">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Servicio 1 - Descripción del primer servicio" loading="lazy">
+            <div class="service-list">
+                <!-- Servicio 1 -->
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="servicio1.png" alt="Salón temático" loading="lazy">
+                    </div>
+                    <div class="service-text">
+                        <h3>Salón Temático</h3>
+                        <p>Espacio amplio y decorado con personajes infantiles. Capacidad para 50 niños. Incluye mesas, sillas y equipo de sonido.</p>
+                    </div>
                 </div>
-                <div class="service-content">
-                    <h3>Servicio 1</h3>
-                    <p>Descripción del servicio 1. Aquí puedes describir uno de los principales servicios que ofrece tu salón de fiestas. Explica qué incluye, qué ventajas ofrece y por qué los clientes deberían elegirlo.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 1</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 2</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 3</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 4</li>
-                    </ul>
+                <!-- Servicio 2 -->
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="servicio2.png" alt="Juegos inflables" loading="lazy">
+                    </div>
+                    <div class="service-text">
+                        <h3>Juegos Inflables</h3>
+                        <p>Trampolines, toboganes y obstáculos. Supervisión incluida y rotación de juegos cada hora.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Servicios 2 (alternada) -->
-    <section class="service-section">
-        <div class="container">
-            <div class="service-container reverse">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1530968830369-b0491f02c5ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Servicio 2 - Descripción del segundo servicio" loading="lazy">
+                <!-- Servicio 3 -->
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="servicio3.png" alt="Catering" loading="lazy">
+                    </div>
+                    <div class="service-text">
+                        <h3>Catering Infantil</h3>
+                        <p>Con distintas opciones de menú, incluyendo pizzas, panchos, frutas, torta personalizada y mesa dulce.</p>
+                    </div>
                 </div>
-                <div class="service-content">
-                    <h3>Servicio 2</h3>
-                    <p>Descripción del servicio 2. Aquí puedes describir otro servicio importante que ofrece tu salón. Explica sus particularidades, quién puede beneficiarse de él y qué lo hace especial.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 1</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 2</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 3</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 4</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Servicios 3 (alternada) -->
-    <section class="service-section">
-        <div class="container">
-            <div class="service-container">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1567593810070-7a5c0925344e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Servicio 3 - Descripción del tercer servicio" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <h3>Servicio 3</h3>
-                    <p>Descripción del servicio 3. Aquí puedes describir un tercer servicio o un valor agregado que ofreces. Menciona qué incluye, cómo se diferencia de otros y por qué es una buena opción para los clientes.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 1</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 2</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 3</li>
-                        <li><i class="fas fa-check-circle"></i> Característica destacada 4</li>
-                    </ul>
+                <!-- Servicio 4 -->
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="servicio4.png" alt="Animación" loading="lazy">
+                    </div>
+                    <div class="service-text">
+                        <h3>Animación y Espectáculos</h3>
+                        <p>Payasos, magos, personajes de cuentos y shows interactivos para entretener a los pequeños.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -814,16 +790,16 @@
             <p class="text-center">Conoce nuestros espacios diseñados para todo tipo de eventos y celebraciones</p>
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1577223625818-75bc1f2ac0e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 1 - Salón principal" loading="lazy">
+                    <img src="instalacion1.png" alt="Instalación 1 - Salón principal" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 2 - Área infantil" loading="lazy">
+                    <img src="instalacion2.png" alt="Instalación 2 - Área infantil" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 3 - Zona de juegos" loading="lazy">
+                    <img src="instalacion3.png" alt="Instalación 3 - Zona de juegos" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalación 4 - Buffet" loading="lazy">
+                    <img src="instalacion4.png" alt="Instalación 4 - Buffet" loading="lazy">
                 </div>
             </div>
         </div>
@@ -875,7 +851,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="https://maps.google.com/?q=Obelisco+Buenos+Aires" class="maps-button" target="_blank" rel="noopener noreferrer">
+                    <a href="https://maps.google.com/?q=Obelisco+Buenos+Aires" class="btn btn-maps" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-map-marked-alt"></i> Cómo llegar
                     </a>
                 </div>
@@ -883,13 +859,13 @@
         </div>
     </section>
 
-    <!-- CTA final -->
+    <!-- CTA final (con misma imagen de fondo que hero) -->
     <section class="final-cta" id="reservas">
         <div class="container">
             <h2>Reserva tu Evento</h2>
             <p>Contamos con disponibilidad para eventos los fines de semana y días de semana. Te recomendamos reservar con anticipación para asegurar la fecha que deseas.</p>
             <p>¡Solicita información ahora mismo por WhatsApp y recibe todas las opciones disponibles para tu celebración!</p>
-            <a href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20disponibilidad%20y%20precios%20para%20un%20evento" class="cta-button whatsapp" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20disponibilidad%20y%20precios%20para%20un%20evento" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> Consultar disponibilidad
             </a>
         </div>
@@ -1001,7 +977,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.service-container, .gallery-item, .contact-grid').forEach(el => {
+        document.querySelectorAll('.service-item, .gallery-item, .contact-grid').forEach(el => {
             observer.observe(el);
         });
     </script>
@@ -1012,7 +988,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Nombre del Salón",
-        "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "image": "instalacion1.png",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Calle 123",
